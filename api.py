@@ -25,9 +25,9 @@ def index():
 
 @app.route('/synthesis', methods=['GET', 'POST'])
 def synthesis():
-    model_name = request.args.get('model_name')
-    target_text = request.args.get('target_text')
-    speaker_id = request.args.get('speaker_id')
+    model_name = request.args.get('model_name',type=str)
+    target_text = request.args.get('target_text',type=str)
+    speaker_id = request.args.get('speaker_id',default=-1,type=int)
     output_file = os.path.join("output",str(time.time()) + ".wav")
     if not model_name in model_list:
         load_model(model_name)
