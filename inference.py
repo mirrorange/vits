@@ -6,8 +6,6 @@ import torch
 import commons
 import utils
 from models import SynthesizerTrn
-#from text.symbols import symbols
-#from text import text_to_sequence
 
 from scipy.io.wavfile import write
 

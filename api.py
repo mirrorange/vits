@@ -16,7 +16,7 @@ def load_model(model_name):
 
 def release_model(model_name):
     if model_name in models:
-        models.pop(model_name)
+        del models[model_name]
 
 model_list = ["paimon","atri","ljs"]
 models = {}
